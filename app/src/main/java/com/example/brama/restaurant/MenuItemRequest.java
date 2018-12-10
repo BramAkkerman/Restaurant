@@ -38,7 +38,7 @@ public class MenuItemRequest  implements Response.Listener<JSONObject>, Response
                 JSONObject item = items.getJSONObject(i);
                 MenuItem menu = new MenuItem(item.getString("name"),
                         item.getString("description"),item.getString("image_url"),
-                        (float) item.getDouble("price"),item.getString("category"));
+                        item.getDouble("price"),item.getString("category"));
                 all.add(menu);
             }
         }

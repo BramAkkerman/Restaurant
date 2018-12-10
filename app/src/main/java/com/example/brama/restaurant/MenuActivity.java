@@ -59,7 +59,7 @@ public class MenuActivity extends AppCompatActivity implements MenuItemRequest.C
             intent.putExtra("name", menuItem.getName());
             intent.putExtra("description", menuItem.getDescription());
             intent.putExtra("image", menuItem.getImageUrl());
-            intent.putExtra("price", String.valueOf(menuItem.getPrice()));
+            intent.putExtra("price", String.valueOf(menuItem.getPrice())+"0");
             startActivity(intent);
         }
     }

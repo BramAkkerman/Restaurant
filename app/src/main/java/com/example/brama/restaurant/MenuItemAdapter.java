@@ -52,7 +52,7 @@ public class MenuItemAdapter extends ArrayAdapter<MenuItem> {
         }
 
         viewHolder.textName.setText(item.getName());
-        viewHolder.textPrice.setText("€" +String.valueOf(item.getPrice()));
+        viewHolder.textPrice.setText("€" +String.valueOf(item.getPrice())+"0");
 
         String path = item.getImageUrl();
         URLToImage image = new URLToImage(viewHolder.image);

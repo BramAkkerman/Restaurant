@@ -4,10 +4,10 @@ public class MenuItem {
     private String name;
     private String description;
     private String imageUrl;
-    private float price;
+    private double price;
     private String category;
 
-    public MenuItem(String name, String description, String imageUrl, float price, String category) {
+    public MenuItem(String name, String description, String imageUrl, double price, String category) {
         this.name = name;
         this.description = description;
         this.imageUrl = imageUrl;
@@ -43,7 +43,7 @@ public class MenuItem {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
