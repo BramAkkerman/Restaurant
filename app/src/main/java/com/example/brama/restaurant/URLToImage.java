@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import java.io.InputStream;
 
+// This class is used to make a bitmap image from a link, found on StackOverflow
 class URLToImage extends AsyncTask<String, Void, Bitmap> {
     private ImageView bmImage;
     public URLToImage(ImageView bmImage) {

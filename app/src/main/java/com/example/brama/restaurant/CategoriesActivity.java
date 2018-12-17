@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+// This activity shows a list with categories you can choose from, downloaded from the api
 public class CategoriesActivity extends AppCompatActivity implements CategoriesRequest.Callback {
 
     @Override
@@ -23,6 +24,7 @@ public class CategoriesActivity extends AppCompatActivity implements CategoriesR
         APIrequest.getCategories(this);
     }
 
+    // Fill the listview with categories using the adapter
     @Override
     public void gotCategories(ArrayList<String> categories) {
         Toast.makeText(this, "Loaded categories", Toast.LENGTH_LONG).show();
@@ -37,6 +39,7 @@ public class CategoriesActivity extends AppCompatActivity implements CategoriesR
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
+    // The adapter to fill the list
     private class listViewListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

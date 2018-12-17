@@ -1,5 +1,6 @@
 package com.example.brama.restaurant;
 
+// This class is used to save the retrieved MenuItems
 public class MenuItem {
     private String name;
     private String description;

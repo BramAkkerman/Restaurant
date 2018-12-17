@@ -3,7 +3,6 @@ package com.example.brama.restaurant;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -11,6 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+// This activity shows the items from the given category, retrieved from the api
 public class MenuActivity extends AppCompatActivity implements MenuItemRequest.Callback {
 
     private String category;
@@ -32,6 +32,7 @@ public class MenuActivity extends AppCompatActivity implements MenuItemRequest.C
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
+    // Save all the items that have the same category as the one clicked on
     @Override
     public void gotMenuItem(ArrayList<MenuItem> menuItems) {
         ArrayList<MenuItem> newMenuItems = new ArrayList<>();
@@ -39,9 +40,7 @@ public class MenuActivity extends AppCompatActivity implements MenuItemRequest.C
             if (item.getCategory().equals(this.category)) {
                 newMenuItems.add(item);
             }
-            Log.d("blabla",String.valueOf(newMenuItems));
         }
-        Log.d("blabla","klaar");
 
         ListView listView = findViewById(R.id.menuList);
 
@@ -51,6 +50,7 @@ public class MenuActivity extends AppCompatActivity implements MenuItemRequest.C
         listView.setOnItemClickListener(new listViewListener());
     }
 
+    // Filling the list with items
     private class listViewListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

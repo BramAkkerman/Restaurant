@@ -16,6 +16,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+// The request to the API to get categories
 public class CategoriesRequest implements Response.Listener<JSONObject>, Response.ErrorListener {
 
     private Context context;
@@ -27,6 +28,7 @@ public class CategoriesRequest implements Response.Listener<JSONObject>, Respons
         this.activity.gotCategoriesError(error.getMessage());
     }
 
+    // Store all categories in an arraylist
     @Override
     public void onResponse(JSONObject response) {
         ArrayList<String> bullshit = new ArrayList<>();

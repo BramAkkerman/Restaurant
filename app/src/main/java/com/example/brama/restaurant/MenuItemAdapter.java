@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 
+// This adapter fills the menu list with MenuItems
 public class MenuItemAdapter extends ArrayAdapter<MenuItem> {
 
     ArrayList<MenuItem> items;

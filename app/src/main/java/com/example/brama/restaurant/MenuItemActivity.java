@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+// This class is used to fill one list item with a menu item
 public class MenuItemActivity extends AppCompatActivity {
 
     @Override

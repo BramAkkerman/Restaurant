@@ -14,6 +14,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+// The request to the API to get all MenuItems
 public class MenuItemRequest  implements Response.Listener<JSONObject>, Response.ErrorListener {
 
     private Context context;
@@ -29,6 +30,7 @@ public class MenuItemRequest  implements Response.Listener<JSONObject>, Response
         this.activity.gotMenuItemError(error.getMessage());
     }
 
+    // Store the MenuItems in an ArrayList
     @Override
     public void onResponse(JSONObject response) {
         ArrayList<MenuItem> all = new ArrayList<>();
